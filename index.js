@@ -1,5 +1,8 @@
 // TODO: Include packages needed for this application
-const { default: inquirer} = require ('inquirer');
+const { default: inquirer } = require('inquirer');
+const fs = require('fs'); 
+const generateMarkdown = require('./utils/generateMarkdown.js');
+
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -60,12 +63,11 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-// Imports the fs module
-const fs = require('fs'); 
 
 function writeToFile(fileName, data) {
-    // Formats the data into a string
-    const content= generateMarkdown(data);
+
+    const content = generateMarkdown(data);
+    // const generateMarkdown = require('./utils/generateMarkdown.js');
 
     // Writes the string to a file
     fs.writeFile(fileName, content, (err) => {

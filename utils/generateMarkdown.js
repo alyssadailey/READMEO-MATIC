@@ -95,10 +95,9 @@ If you have any questions, please reach out to me at [${data.email}](mailto:${da
 You can find more of my work at [${data.github}](https://github.com/${data.github}).
 `;
 
-
-
-
 }
 
 
-export default generateMarkdown;
+// export default generateMarkdown;
+
+module.exports = generateMarkdown;
