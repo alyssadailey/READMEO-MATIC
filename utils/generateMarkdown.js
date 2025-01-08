@@ -96,7 +96,4 @@ You can find more of my work at [${data.github}](https://github.com/${data.githu
 
 }
 
-
-// export default generateMarkdown;
-
 module.exports = generateMarkdown;

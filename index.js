@@ -5,6 +5,7 @@ const generateMarkdown = require('./utils/generateMarkdown.js');
 
 
 // TODO: Create an array of questions for user input
+// Question prompt array
 const questions = [
     {
         type: 'input',
@@ -67,8 +68,7 @@ const questions = [
 function writeToFile(fileName, data) {
 
     const content = generateMarkdown(data);
-    // const generateMarkdown = require('./utils/generateMarkdown.js');
-
+   
     // Writes the string to a file
     fs.writeFile(fileName, content, (err) => {
         if (err) {
