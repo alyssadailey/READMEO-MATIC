@@ -2,16 +2,16 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license === 'MIT') {
-  `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](${renderLicenseLink(license)})`
+   return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](${renderLicenseLink(license)})`
   }
   else if (license === 'Apache 2.0') {
-    `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)] (${renderLicenseBadge(license)})`
+   return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)] (${renderLicenseBadge(license)})`
   }
   else if (license === 'GPL 3.0') {
-    `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)] (${renderLicenseBadge(license)})`
+   return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)] (${renderLicenseBadge(license)})`
   }
   else if (license === 'None') {
-    ``
+   return ``
   }
 }
 
@@ -19,8 +19,7 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license === 'MIT')
-  {
+  if (license === 'MIT') {
     return `https://opensource.org/licenses/MIT`
   }
   else if (license === 'Apache 2.0') {
@@ -30,7 +29,7 @@ function renderLicenseLink(license) {
     return `(https://www.gnu.org/licenses/gpl-3.0)`
   }
   else if (license === 'None') {
-    return ''
+    return '';
   }
 }
 
@@ -38,16 +37,15 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (license === 'MIT' || license === 'Apache 2.0' || license === 'GPL 3.0')
-  return `## License ${renderLicenseBadge(license)}
-  This project is licensed under the ${license} license.`
+  if (license === 'MIT' || license === 'Apache 2.0' || license === 'GPL 3.0') {
+  return `## License ${renderLicenseBadge(license)};
 
+  This project is licensed under the ${license} license.`;
+  }
 
   else if (license === 'None') {
     return ``
   }
-
-
 }
 
 
@@ -79,6 +77,7 @@ ${data.usage}
 ${data.installation}
 
 
+## License 
 ${renderLicenseSection(data.license)}
 
 
