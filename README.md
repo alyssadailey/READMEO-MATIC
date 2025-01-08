@@ -19,6 +19,8 @@ The README-O-MATIC is an application that prompts a user with questions about th
 ## Usage
 The user must run node index.js, and answer all questions with acceptable inputs when prompted, in order to generate their README.
 
+Video Demo of the README-O-MATIC Application: https://app.screencastify.com/v3/watch/WDT5ScFNWmW05fu5hHPb
+
 
 ## Installation
 N/a
